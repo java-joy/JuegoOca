@@ -2,12 +2,10 @@ package org.vipsion.oca.modelo;
 
 public class Jugador {
 
-    private Ficha ficha;
-    private int id;
+    private final Ficha ficha;
     private int ultimoValorDado;
 
-    public Jugador(int id) {
-        this.id = id;
+    public Jugador() {
         this.ficha = new Ficha();
     }
 

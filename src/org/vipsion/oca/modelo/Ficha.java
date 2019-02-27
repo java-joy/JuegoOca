@@ -5,6 +5,7 @@ public class Ficha {
     private int posicion;
     private int id;
     private int turnosExtra;
+    private Boolean fin;
     // private int turnosSinTirar; 
 
     public Boolean getFin() {
@@ -14,8 +15,6 @@ public class Ficha {
     public void setFin(Boolean fin) {
         this.fin = fin;
     }
-
-    private Boolean fin;
 
     public Ficha() {
         posicion = 1;

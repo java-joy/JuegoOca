@@ -28,8 +28,6 @@ public class Tablero {
         casillas.set(49, new Oca(50, 4));
         casillas.set(54, new OcaFin(59, 4));
         casillas.set(62, new Fin(63));
-
-        // TODO: Crear todas las casillas del tablero de la oca
     }
 
     public void mueveFicha(Ficha ficha, int numDado) {
@@ -39,7 +37,6 @@ public class Tablero {
         if (numCasilla > numCasillas) {
             numCasilla = (numCasillas - ((ficha.getPosicion() + numDado) - numCasillas));
         }
-
         casillas.get(numCasilla-1).posaFicha(ficha);
     }
 

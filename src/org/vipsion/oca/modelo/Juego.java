@@ -14,17 +14,13 @@ public class Juego {
     private int numJugadores = 2;
 
     public Juego() {
-
         jugadores = new ArrayList<>();
-
         tablero = new Tablero();
         dado = new Dado();
-
-        Jugador jugador1 = new Jugador(0);
-        Jugador jugador2 = new Jugador(1);
+        Jugador jugador1 = new Jugador();
+        Jugador jugador2 = new Jugador();
         jugadores.add(jugador1);
         jugadores.add(jugador2);
-
     }
 
     public void setCoordinador(Coordinador coordinador) {
@@ -32,17 +28,12 @@ public class Juego {
     }
 
     public int sigTurno() {
-
         int sigTurno;
         sigTurno = (turno + 1) % numJugadores;
-        /*  while (jugadores.get(turno).pierdeTurno()) {
-            sigTurno = (turno + 1) % numJugadores;
-        } */
         if (jugadores.get(turno).getTurnosExtra() > 0) {
             sigTurno = turno;
             jugadores.get(turno).decrementaTurnosExtra();
         }
-
         return (sigTurno);
     }
 
@@ -69,8 +60,6 @@ public class Juego {
 
     public void juega() {
         jugadores.get(turno).juegaTurno(tablero, dado);
-        return;
-
     }
 
     public Boolean esFin() {

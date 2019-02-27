@@ -81,8 +81,7 @@ public class PanelJugador extends JPanel {
         jLabel1.setFont(jLabel1.getFont().deriveFont(32.0f));
         jLabel2.setFont(jLabel2.getFont().deriveFont(32.0f));
         jLabel3.setFont(jLabel3.getFont().deriveFont(32.0f));
-      
-        
+
         tiraDado.setFont(tiraDado.getFont().deriveFont(32.0f));
         valorDado.setFont(valorDado.getFont().deriveFont(32.0f));
         posicionTablero.setFont(posicionTablero.getFont().deriveFont(32.0f));
@@ -102,9 +101,9 @@ public class PanelJugador extends JPanel {
                                                         .addComponent(jLabel2)
                                                         .addComponent(jLabel1)))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(60, 60, 60).addComponent(tiraDado)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(valorDado, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))).addContainerGap(275, Short.MAX_VALUE)));
+                                                .addGap(60, 60, 60).addComponent(tiraDado)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(valorDado, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))).addContainerGap(275, Short.MAX_VALUE)));
         jPanel1Layout.setVerticalGroup(
                 jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup().addGap(51, 51, 51)
