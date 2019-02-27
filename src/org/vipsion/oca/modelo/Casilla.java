@@ -2,7 +2,7 @@ package org.vipsion.oca.modelo;
 
 public class Casilla {
 
-    private int posicion;
+    protected int posicion;
 
     public Casilla(int posicion) {
         this.posicion = posicion;

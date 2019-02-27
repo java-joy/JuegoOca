@@ -1,11 +1,10 @@
 package org.vipsion.oca.modelo;
 
-public class Oca extends Casilla {
+public class OcaFin extends Casilla {
 
     private int desplazamiento;
-    private int turnosExtra = 1;
 
-    public Oca(int posicion, int desplazamiento) {
+    public OcaFin(int posicion, int desplazamiento) {
         super(posicion);
         this.desplazamiento = desplazamiento;
     }
@@ -13,10 +12,6 @@ public class Oca extends Casilla {
     @Override
     public void posaFicha(Ficha ficha) {
         ficha.setPosicion(posicion + desplazamiento);
-        ficha.setTurnosExtra(turnosExtra);
-        
-        // TODO: 
+        ficha.setFin(true);
     }
-
-    // TODO: implementar posaFicha
 }

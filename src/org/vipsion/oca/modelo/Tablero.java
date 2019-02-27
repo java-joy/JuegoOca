@@ -9,40 +9,38 @@ public class Tablero {
     private int numCasillas;
 
     public Tablero() {
-        this.numCasillas = 21;
+        this.numCasillas = 63;
         this.casillas = new ArrayList<>();
-        this.casillas.add(new Casilla(0));
-        this.casillas.add(new Casilla(1));
-        this.casillas.add(new Casilla(2));
-        this.casillas.add(new Casilla(3));
-        this.casillas.add(new Casilla(4));
-        this.casillas.add(new Casilla(5));
-        this.casillas.add(new Casilla(6));
-        this.casillas.add(new Casilla(7));
-        this.casillas.add(new Casilla(8));
-        this.casillas.add(new Casilla(9));
-        this.casillas.add(new Casilla(10));
-        this.casillas.add(new Casilla(11));
-        this.casillas.add(new Casilla(12));
-        this.casillas.add(new Casilla(13));
-        this.casillas.add(new Casilla(14));
-        this.casillas.add(new Casilla(15));
-        this.casillas.add(new Casilla(16));
-        this.casillas.add(new Casilla(17));
-        this.casillas.add(new Casilla(28));
-        this.casillas.add(new Casilla(19));
-        this.casillas.add(new Casilla(20));
-        this.casillas.add(new Casilla(21));
+        for (int i = 0; i < numCasillas; i++) {
+            this.casillas.add(new Casilla(i+1));
+        }
+        casillas.set(8, new Oca(9,5));
+        casillas.set(17, new Oca(18,5));
+        casillas.set(26, new Oca(27, 5));
+        casillas.set(35, new Oca(36, 5));
+        casillas.set(44, new Oca(45, 5));
+        casillas.set(53, new Oca(54, 5));
+        casillas.set(4, new Oca(5, 4));
+        casillas.set(13, new Oca(14, 4));
+        casillas.set(22, new Oca(23, 4));
+        casillas.set(31, new Oca(32, 4));
+        casillas.set(40, new Oca(41, 4));
+        casillas.set(49, new Oca(50, 4));
+        casillas.set(54, new OcaFin(59, 4));
+        casillas.set(62, new Fin(63));
 
         // TODO: Crear todas las casillas del tablero de la oca
     }
 
     public void mueveFicha(Ficha ficha, int numDado) {
+
         int numCasilla = ficha.getPosicion() + numDado;
 
-        casillas.get(numCasilla).posaFicha(ficha);
+        if (numCasilla > numCasillas) {
+            numCasilla = (numCasillas - ((ficha.getPosicion() + numDado) - numCasillas));
+        }
 
-        // TODO: Calcular posicion si va más allá de la última casilla 
+        casillas.get(numCasilla-1).posaFicha(ficha);
     }
 
 }

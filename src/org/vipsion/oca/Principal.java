@@ -18,7 +18,7 @@ public class Principal {
         miCoordinador.setLogica(miJuego);
         miCoordinador.setDado(miDado);
         miGUI.setVisible(true);
-       // miLogica.juega();
+        miCoordinador.inicia();
         
     }
 }

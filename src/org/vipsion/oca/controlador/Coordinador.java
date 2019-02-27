@@ -23,15 +23,25 @@ public class Coordinador {
         this.dado = dado;
     }
 
-    public void tiraDado() {
-        int valorDado = dado.dameNumero();
+    public void inicia() {
+        int turnoInicio = juego.getTurno();
+        GUI.sigTurno(turnoInicio);
+    }
+
+    public void juega() {
+        juego.juega();
+        int posicionTablero = juego.ultimaPosicionTablero();
+        int valorDado = juego.ultimoValorDado();
         int turno = juego.getTurno();
         GUI.setValorDado(turno, valorDado);
-        int posicionFicha = juego.juega(turno, valorDado);
-        GUI.setPosicionTablero(turno, posicionFicha);
-        GUI.disableTurno(turno);
-        GUI.enableTurno(juego.sigTurno());
-        juego.setTurno(juego.sigTurno());
+        GUI.setPosicionTablero(turno, posicionTablero);
+        if (juego.esFin()) {
+            GUI.setGanador(turno);
+        } else {
+            int sigTurno = juego.avanzaTurno();
+            GUI.sigTurno(sigTurno);
+        }
+        return;
 
     }
 

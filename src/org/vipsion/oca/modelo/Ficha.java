@@ -3,11 +3,24 @@ package org.vipsion.oca.modelo;
 public class Ficha {
 
     private int posicion;
-
     private int id;
+    private int turnosExtra;
+    // private int turnosSinTirar; 
+
+    public Boolean getFin() {
+        return fin;
+    }
+
+    public void setFin(Boolean fin) {
+        this.fin = fin;
+    }
+
+    private Boolean fin;
 
     public Ficha() {
-        this.posicion = 1;
+        posicion = 1;
+        fin = false;
+        turnosExtra = 0;
     }
 
     public int getPosicion() {
@@ -16,6 +29,18 @@ public class Ficha {
 
     public void setPosicion(int posicion) {
         this.posicion = posicion;
+    }
+
+    public int getTurnosExtra() {
+        return turnosExtra;
+    }
+
+    public void setTurnosExtra(int turnosExtra) {
+        this.turnosExtra = turnosExtra;
+    }
+
+    public void decrementaTurnosExtra() {
+        turnosExtra--;
     }
 
 }

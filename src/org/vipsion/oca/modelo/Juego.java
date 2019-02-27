@@ -9,20 +9,19 @@ public class Juego {
     private Coordinador coordinador;
     private List<Jugador> jugadores;
     private int turno = 0;
+    private Tablero tablero;
     private Dado dado;
+    private int numJugadores = 2;
 
     public Juego() {
+
         jugadores = new ArrayList<>();
 
-        Tablero tablero = new Tablero();
-        Dado dado = new Dado();
+        tablero = new Tablero();
+        dado = new Dado();
 
         Jugador jugador1 = new Jugador(0);
-        jugador1.setTablero(tablero);
-
         Jugador jugador2 = new Jugador(1);
-        jugador2.setTablero(tablero);
-
         jugadores.add(jugador1);
         jugadores.add(jugador2);
 
@@ -33,7 +32,23 @@ public class Juego {
     }
 
     public int sigTurno() {
-        return ((this.turno + 1) % 2);
+
+        int sigTurno;
+        sigTurno = (turno + 1) % numJugadores;
+        /*  while (jugadores.get(turno).pierdeTurno()) {
+            sigTurno = (turno + 1) % numJugadores;
+        } */
+        if (jugadores.get(turno).getTurnosExtra() > 0) {
+            sigTurno = turno;
+            jugadores.get(turno).decrementaTurnosExtra();
+        }
+
+        return (sigTurno);
+    }
+
+    public int avanzaTurno() {
+        turno = sigTurno();
+        return turno;
     }
 
     public void setTurno(int turno) {
@@ -41,11 +56,24 @@ public class Juego {
     }
 
     public int getTurno() {
-        return (this.turno);
+        return (turno);
     }
 
-    public int juega(int turno, int dado) {
-        return (jugadores.get(turno).juegaTurno(dado));
-        
+    public int ultimoValorDado() {
+        return jugadores.get(turno).getUltimoValorDado();
+    }
+
+    public int ultimaPosicionTablero() {
+        return jugadores.get(turno).getUltimaPosicionTablero();
+    }
+
+    public void juega() {
+        jugadores.get(turno).juegaTurno(tablero, dado);
+        return;
+
+    }
+
+    public Boolean esFin() {
+        return jugadores.get(turno).esGanador();
     }
 }

@@ -5,7 +5,9 @@ public class Fin extends Casilla {
     public Fin(int posicion) {
         super(posicion);
     }
-    
-    
-    // TODO: implementar posaFicha
+
+    @Override
+    public void posaFicha(Ficha ficha) {
+        ficha.setFin(true);
+    }
 }
