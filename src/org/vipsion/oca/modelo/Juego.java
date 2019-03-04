@@ -7,16 +7,14 @@ import org.vipsion.oca.controlador.Coordinador;
 public class Juego {
 
     private Coordinador coordinador;
-    private List<Jugador> jugadores;
+    private final List<Jugador> jugadores;
     private int turno = 0;
-    private Tablero tablero;
-    private Dado dado;
-    private int numJugadores = 2;
+    private final Tablero tablero;
+    private final int numJugadores = 2;
 
     public Juego() {
         jugadores = new ArrayList<>();
         tablero = new Tablero();
-        dado = new Dado();
         Jugador jugador1 = new Jugador();
         Jugador jugador2 = new Jugador();
         jugadores.add(jugador1);
@@ -59,7 +57,7 @@ public class Juego {
     }
 
     public void juega() {
-        jugadores.get(turno).juegaTurno(tablero, dado);
+        jugadores.get(turno).juegaTurno(tablero);
     }
 
     public Boolean esFin() {

@@ -9,8 +9,8 @@ public class Jugador {
         this.ficha = new Ficha();
     }
 
-    public int juegaTurno(Tablero tablero, Dado dado) {
-        ultimoValorDado = dado.dameNumero();
+    public int juegaTurno(Tablero tablero) {
+        ultimoValorDado = Dado.dameNumero();
         tablero.mueveFicha(ficha, ultimoValorDado);
         return ficha.getPosicion();
     }
@@ -36,6 +36,6 @@ public class Jugador {
     }
 
     public Boolean esGanador() {
-        return  ficha.getFin();
+        return ficha.getFin();
     }
 }

@@ -3,7 +3,6 @@ package org.vipsion.oca.modelo;
 public class Ficha {
 
     private int posicion;
-    private int id;
     private int turnosExtra;
     private Boolean fin;
     // private int turnosSinTirar; 

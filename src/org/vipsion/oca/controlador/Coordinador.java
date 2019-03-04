@@ -1,7 +1,6 @@
 package org.vipsion.oca.controlador;
 
 import org.vipsion.oca.modelo.Juego;
-import org.vipsion.oca.modelo.Dado;
 import org.vipsion.oca.vista.OcaGUI;
 
 public class Coordinador {
@@ -9,7 +8,6 @@ public class Coordinador {
     private OcaGUI GUI;
 
     private Juego juego;
-    private Dado dado;
 
     public void setGUI(OcaGUI GUI) {
         this.GUI = GUI;
@@ -17,10 +15,6 @@ public class Coordinador {
 
     public void setLogica(Juego juego) {
         this.juego = juego;
-    }
-
-    public void setDado(Dado dado) {
-        this.dado = dado;
     }
 
     public void inicia() {
@@ -41,8 +35,6 @@ public class Coordinador {
             int sigTurno = juego.avanzaTurno();
             GUI.sigTurno(sigTurno);
         }
-        return;
-
     }
 
 }

@@ -1,7 +1,8 @@
 package org.vipsion.oca.modelo;
 
 public class Dado {
-    public int dameNumero() {
+
+    static public int dameNumero() {
         return (int) (Math.random() * 6) + 1;
     }
 }
