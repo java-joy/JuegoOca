@@ -4,10 +4,6 @@ import org.vipsion.oca.vista.OcaGUI;
 import org.vipsion.oca.controlador.Coordinador;
 import org.vipsion.oca.modelo.Juego;
 
-/**
- *
- * @author Ivan
- */
 public class Principal {
 
     public static void main(String[] args) {
@@ -17,7 +13,7 @@ public class Principal {
         miJuego.setCoordinador(miCoordinador);
         miGUI.setCoordinador(miCoordinador);
         miCoordinador.setGUI(miGUI);
-        miCoordinador.setLogica(miJuego);
+        miCoordinador.setJuego(miJuego);
         miGUI.setVisible(true);
         miCoordinador.inicia();
     }
