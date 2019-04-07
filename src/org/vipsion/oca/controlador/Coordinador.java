@@ -4,7 +4,7 @@ import org.vipsion.oca.modelo.Juego;
 import org.vipsion.oca.vista.OcaGUI;
 
 /**
- * Sirve para intermediar entre las peticiones provenientes
+ * Sirvr para intermediar entre las peticiones que provienen
  * del GUI (vistas) y los objetos que implementan la lógica de la aplicación
  * (Modelo).
  * 
