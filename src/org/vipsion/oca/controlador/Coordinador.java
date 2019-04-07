@@ -33,7 +33,7 @@ public class Coordinador {
     /**
      * Asocia al objeto a cargo de la lógica del juego con este coordinador
      *
-     * @param juego Objeto a cargo de la lógica del juego (Modelo)
+     * @param juego
      */
     public void setJuego(Juego juego) {
         this.juego = juego;

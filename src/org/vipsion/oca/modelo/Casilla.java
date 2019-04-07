@@ -12,4 +12,12 @@ public class Casilla {
         ficha.setPosicion(posicion);
     }
 
+    public int getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
+    }
+
 }

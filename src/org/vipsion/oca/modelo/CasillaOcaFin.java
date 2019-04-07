@@ -1,10 +1,10 @@
 package org.vipsion.oca.modelo;
 
-public class OcaFin extends Casilla {
+public class CasillaOcaFin extends Casilla {
 
     private final int desplazamiento;
 
-    public OcaFin(int posicion, int desplazamiento) {
+    public CasillaOcaFin(int posicion, int desplazamiento) {
         super(posicion);
         this.desplazamiento = desplazamiento;
     }
