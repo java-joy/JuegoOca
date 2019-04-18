@@ -3,14 +3,16 @@ package org.vipsion.oca.modelo;
 public class Jugador {
 
     private final Ficha ficha;
+    private final Dado dado;
     private int ultimoValorDado;
 
-    public Jugador() {
-        this.ficha = new Ficha();
+    public Jugador(Ficha ficha, Dado dado) {
+        this.dado = dado;
+        this.ficha = ficha;
     }
 
     public int juegaTurno(Tablero tablero) {
-        ultimoValorDado = Dado.dameNumero();
+        ultimoValorDado = dado.dameNumero();
         tablero.mueveFicha(ficha, ultimoValorDado);
         return ficha.getPosicion();
     }

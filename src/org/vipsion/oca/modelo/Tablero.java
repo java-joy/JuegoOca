@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Tablero {
 
-    private List<Casilla> casillas;
+    private final List<Casilla> casillas;
     private final int numCasillas;
 
     public Tablero() {

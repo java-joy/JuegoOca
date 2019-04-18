@@ -6,7 +6,7 @@ import org.vipsion.oca.controlador.Coordinador;
 
 public class Juego {
 
-    private Coordinador coordinador;
+    
     private final List<Jugador> jugadores;
     private int turno = 0;
     private final Tablero tablero;
@@ -15,14 +15,10 @@ public class Juego {
     public Juego() {
         jugadores = new ArrayList<>();
         tablero = new Tablero();
-        Jugador jugador1 = new Jugador();
-        Jugador jugador2 = new Jugador();
+        Jugador jugador1 = new Jugador(new Ficha(), new Dado());
+        Jugador jugador2 = new Jugador(new Ficha(), new Dado());
         jugadores.add(jugador1);
         jugadores.add(jugador2);
-    }
-
-    public void setCoordinador(Coordinador coordinador) {
-        this.coordinador = coordinador;
     }
 
     public int sigTurno() {
