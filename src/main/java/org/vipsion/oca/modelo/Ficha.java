@@ -11,7 +11,7 @@ public class Ficha {
         return fin;
     }
 
-    public void setFin(Boolean fin) {
+    void setFin(Boolean fin) {
         this.fin = fin;
     }
 

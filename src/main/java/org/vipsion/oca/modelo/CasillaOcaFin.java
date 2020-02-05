@@ -1,6 +1,6 @@
 package org.vipsion.oca.modelo;
 
-public class CasillaOcaFin extends Casilla {
+public class CasillaOcaFin extends Casilla{
 
     private final int desplazamiento;
 

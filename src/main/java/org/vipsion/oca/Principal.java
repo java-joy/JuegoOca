@@ -10,7 +10,6 @@ public class Principal {
         Coordinador miCoordinador = new Coordinador();
         Juego miJuego = new Juego();
         OcaGUI miGUI = new OcaGUI();
-       // miJuego.setCoordinador(miCoordinador);
         miGUI.setCoordinador(miCoordinador);
         miCoordinador.setGUI(miGUI);
         miCoordinador.setJuego(miJuego);

@@ -6,7 +6,6 @@ import org.vipsion.oca.controlador.Coordinador;
 
 public class Juego {
 
-    
     private final List<Jugador> jugadores;
     private int turno = 0;
     private final Tablero tablero;
@@ -21,7 +20,7 @@ public class Juego {
         jugadores.add(jugador2);
     }
 
-    public int sigTurno() {
+    private int sigTurno() {
         int sigTurno;
         sigTurno = (turno + 1) % numJugadores;
         if (jugadores.get(turno).getTurnosExtra() > 0) {
